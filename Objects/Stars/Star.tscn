@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c51y2shep6ubj"]
+
+[ext_resource type="Texture2D" uid="uid://08ohm828tq4j" path="res://Assets/Stars/Star.png" id="1_ewwum"]
+[ext_resource type="Script" uid="uid://c4teqraog55dg" path="res://Misc/Star.cs" id="1_q5piu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_chqlt"]
+radius = 294.4911
+
+[node name="Node2D" type="Node2D" unique_id=2028188907]
+script = ExtResource("1_q5piu")
+mass = 10000000
+name = "Baltzar"
+mass = 10000000
+name = "Baltzar"
+Radius = 495.94012
+Speed = 1.8728737
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1468913603]
+texture = ExtResource("1_ewwum")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1458019245]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=107391430]
+shape = SubResource("CircleShape2D_chqlt")
+
+[connection signal="area_entered" from="Area2D" to="." method="gravityCalc"]

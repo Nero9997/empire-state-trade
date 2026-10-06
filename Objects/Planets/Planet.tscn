@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bbx16xq23ser8"]
+
+[ext_resource type="Texture2D" uid="uid://ttst4nww0s1e" path="res://Assets/Planets/Planet.png" id="1_2hiue"]
+[ext_resource type="Script" uid="uid://dc0d2vn1f7ay0" path="res://Misc/CelestialBody.cs" id="1_76fol"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_chqlt"]
+radius = 17.088007
+
+[node name="Node2D" type="Node2D" unique_id=1486127275 node_paths=PackedStringArray("viewButton", "planetStats")]
+script = ExtResource("1_76fol")
+mass = 100
+name = "Prime"
+viewButton = NodePath("Button")
+planetStats = NodePath("Stats")
+
+[node name="Planet" type="Sprite2D" parent="." unique_id=1928821004]
+position = Vector2(0, -32)
+texture = ExtResource("1_2hiue")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=613490505]
+position = Vector2(0, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2044960629]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_chqlt")
+
+[node name="Button" type="Button" parent="." unique_id=45552042]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -19.0
+offset_top = -35.0
+offset_right = 18.0
+offset_bottom = 4.0
+
+[node name="Stats" type="Label" parent="." unique_id=690001506]
+visible = false
+offset_left = 31.0
+offset_top = -99.0
+offset_right = 161.0
+offset_bottom = -36.0
+text = "Habitability:
+Surface makeup:"
+
+[connection signal="area_entered" from="Area2D" to="." method="gravityCalc"]
+[connection signal="pressed" from="Button" to="." method="CheckPlanetDetails"]
