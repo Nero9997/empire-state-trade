@@ -13,14 +13,17 @@ public partial class CelestialBody : Node2D
 	private Button viewButton;
 	[Export]
 	private Label planetStats;
-	[Export] string bodyType;
+	[Export] 
+	private string bodyType;
 
 
 
 	// celestial body oribit propoerties
 	// the star
-	[Export] public float Radius = (float)GD.RandRange(100.0f, 500.0f);
-	[Export] public float Speed = (float)GD.RandRange(0.1f, 2.0f);    // radians per second
+	[Export] 
+	public float Radius = (float)GD.RandRange(100.0f, 500.0f);
+	[Export] 
+	public float Speed = (float)GD.RandRange(0.1f, 1.0f);    // radians per second
 	float angle = 0f;
 
 
@@ -36,8 +39,8 @@ public partial class CelestialBody : Node2D
 	public override void _Process(double delta)
 	{	
 		angle += Speed * (float)delta;
-    	Vector2 offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Radius;
-    	GlobalPosition = orbit.returnGlobalPosition() + offset;
+		Vector2 offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Radius;
+		GlobalPosition = orbit.returnGlobalPosition() + offset;
 	}
 	public void gravityCalc(Area2D area)
 	{
