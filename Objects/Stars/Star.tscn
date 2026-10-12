@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://08ohm828tq4j" path="res://Assets/Stars/Star.png" id="1_ewwum"]
 [ext_resource type="Script" uid="uid://c4teqraog55dg" path="res://Misc/Star.cs" id="1_q5piu"]
+[ext_resource type="PackedScene" uid="uid://bbx16xq23ser8" path="res://Objects/Planets/Planet.tscn" id="2_s21p2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_chqlt"]
 radius = 294.4911
@@ -10,6 +11,7 @@ radius = 294.4911
 script = ExtResource("1_q5piu")
 mass = 10000000
 name = "Baltzar"
+planet = ExtResource("2_s21p2")
 mass = 10000000
 name = "Baltzar"
 Radius = 495.94012

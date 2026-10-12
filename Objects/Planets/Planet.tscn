@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_chqlt"]
 radius = 17.088007
 
-[node name="Node2D" type="Node2D" unique_id=1486127275 node_paths=PackedStringArray("viewButton", "planetStats")]
+[node name="Planet" type="Node2D" unique_id=1486127275 node_paths=PackedStringArray("viewButton", "planetStats")]
 script = ExtResource("1_76fol")
 mass = 100
 name = "Prime"

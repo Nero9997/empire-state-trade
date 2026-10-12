@@ -1,17 +1,11 @@
 [gd_scene format=3 uid="uid://dsgfbtaqmfctr"]
 
 [ext_resource type="PackedScene" uid="uid://c51y2shep6ubj" path="res://Objects/Stars/Star.tscn" id="1_56pi7"]
-[ext_resource type="PackedScene" uid="uid://bbx16xq23ser8" path="res://Objects/Planets/Planet.tscn" id="2_56pi7"]
 
 [node name="Node2D" type="Node2D" unique_id=623305407]
 
 [node name="Node2D" parent="." unique_id=2028188907 instance=ExtResource("1_56pi7")]
 position = Vector2(2, 2)
-Radius = 495.94012
-Speed = 1.8728737
-
-[node name="Node2D2" parent="." unique_id=1486127275 instance=ExtResource("2_56pi7")]
-position = Vector2(-42, -124)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=112397874]
 position = Vector2(0, -1)
