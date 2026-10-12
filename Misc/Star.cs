@@ -12,15 +12,13 @@ the orbit, speed orbit, and contents based on the radius of its orbit.
 
 A star should have the following capabilities
 - it must have its own mass to determine its star class -Check
-- it must have a max amount of celestialbodys to prevent crowding
+- it must have a max amount of Planets to prevent crowding
 or some other error - Check
 - and lastly it must way of creating and storing planets in its orbit. - Check
 */
 public partial class Star : CelestialBody
 {
 	// celesital body properties
-	[Export]
-	private int mass;
 	[Export]
 	private string name;
 	[Export]
@@ -40,11 +38,11 @@ public partial class Star : CelestialBody
 		/*This for loop creates a random amount of planets in its orbit
 		and then stores them in an array
 		*/
-		bodiesInOrbit = new CelestialBody[GD.RandRange(1,6)];
+		bodiesInOrbit = new Planet[GD.RandRange(1,6)];
 		for(int i = 0; i < bodiesInOrbit.Length; i++)
 		{
-			//each iteration of this loop will resuse the newBody variable to instantiate a new celestialbody child to the star.
-			CelestialBody newBody = planet.Instantiate() as CelestialBody;
+			//each iteration of this loop will resuse the newBody variable to instantiate a new Planet child to the star.
+			Planet newBody = planet.Instantiate() as Planet;
 			bodiesInOrbit[i] = newBody;
 			AddChild(bodiesInOrbit[i]);
 			//newBody.GlobalPosition = GlobalPosition;
@@ -67,10 +65,6 @@ public partial class Star : CelestialBody
 			planetStats.Visible = false;
 		}
 	}
-	public int returnmass()
-	{
-		return mass;
-	}
 	public string returnname()
 	{
 		return name;
@@ -79,4 +73,16 @@ public partial class Star : CelestialBody
 	{
 		return GlobalPosition;
 	} 
+		public string returnorbit()
+	{
+		if(orbit != null)
+		{
+			return orbit.returnname();
+		}
+		else
+		{
+			return "No orbit";
+		}
+	}
+
 }
