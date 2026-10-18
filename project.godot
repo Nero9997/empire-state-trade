@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="EmpireStateTrade"
-run/main_scene="uid://c6w8uusjjxfbb"
+run/main_scene="uid://cuqdhur3k4hrv"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
