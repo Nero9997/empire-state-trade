@@ -17,8 +17,8 @@ text = "Buildings"
 
 [node name="Label2" type="Label" parent="HBoxContainer" unique_id=497381064]
 layout_mode = 2
-text = "PlanetStats"
+text = "WorkForce"
 
 [node name="Label3" type="Label" parent="HBoxContainer" unique_id=2002061039]
 layout_mode = 2
-text = "Buildings"
+text = "Stats"
