@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dxsawknxh3iu8"]
+
+[ext_resource type="Script" uid="uid://dqk435o7yf108" path="res://Misc/SpawnPlanet.cs" id="1_x52ug"]
+[ext_resource type="PackedScene" uid="uid://bbx16xq23ser8" path="res://Objects/Planets/Planet.tscn" id="2_sfciq"]
+
+[node name="ObjectMarker" type="Marker2D" unique_id=645918896]
+script = ExtResource("1_x52ug")
+planet = ExtResource("2_sfciq")

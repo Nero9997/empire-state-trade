@@ -12,11 +12,9 @@ public partial class Planet : CelestialBody
 	[Export]
 	private Label planetStats;
 	// celestial body oribit propoerties
-	[Export] 
 	public float Radius = (float)GD.RandRange(100.0f, 500.0f);
-	[Export] 
 	public float Speed = (float)GD.RandRange(0.1f, 1.0f);    // radians per second
-	float angle = 0f;
+	float angle = (float)GD.RandRange(0.1f, 10.0f);
 	/*
 	[Export]
 	cities
@@ -44,18 +42,21 @@ public partial class Planet : CelestialBody
 		selectPlanetSizes();
 		determinePlanetType();
 		determineBuildingPlots();
+		/*
+		if(orbit != null)
+		{
+			Vector2 offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Radius;
+			GlobalPosition = orbit.returnGlobalPosition() + offset;	
+		}
+		*/
 
 		GD.Print(planetType, planetSize, buildingPlots, planetStats);
 	}
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if(orbit != null)
-		{
-			angle += Speed * (float)delta;
-			Vector2 offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Radius;
-			GlobalPosition = orbit.returnGlobalPosition() + offset;	
-		}
+		
+
 	}
 	//Planet creating process
 
@@ -136,7 +137,7 @@ public partial class Planet : CelestialBody
 		{
 			planetType = determinePlanetMakeup((planetTypes)GD.RandRange(1,5));
 		}
-		else if(planetType.Equals("small"))
+		else if(planetSize.Equals("small"))
 		{
 			planetType = determinePlanetMakeup((planetTypes)GD.RandRange(1,5));
 		}
@@ -179,5 +180,4 @@ public partial class Planet : CelestialBody
 			planetStats.Visible = false;
 		}
 	}
-
 }

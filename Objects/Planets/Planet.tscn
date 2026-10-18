@@ -9,8 +9,6 @@ radius = 17.088007
 [node name="Planet" type="Node2D" unique_id=1486127275 node_paths=PackedStringArray("planetStats", "viewButton", "planetStats")]
 script = ExtResource("1_76fol")
 planetStats = NodePath("Stats")
-Radius = 191.85768
-Speed = 0.34047744
 viewButton = NodePath("Button")
 planetStats = NodePath("Stats")
 

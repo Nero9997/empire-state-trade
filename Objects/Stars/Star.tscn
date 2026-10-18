@@ -5,17 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://bbx16xq23ser8" path="res://Objects/Planets/Planet.tscn" id="2_s21p2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_chqlt"]
-radius = 294.4911
+radius = 667.2166
 
 [node name="Node2D" type="Node2D" unique_id=2028188907]
 script = ExtResource("1_q5piu")
-mass = 10000000
 name = "Baltzar"
 planet = ExtResource("2_s21p2")
-mass = 10000000
 name = "Baltzar"
-Radius = 495.94012
-Speed = 1.8728737
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1468913603]
 texture = ExtResource("1_ewwum")

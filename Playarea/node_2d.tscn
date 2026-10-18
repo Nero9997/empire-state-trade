@@ -1,11 +1,33 @@
 [gd_scene format=3 uid="uid://dsgfbtaqmfctr"]
 
 [ext_resource type="PackedScene" uid="uid://c51y2shep6ubj" path="res://Objects/Stars/Star.tscn" id="1_56pi7"]
+[ext_resource type="PackedScene" uid="uid://dxsawknxh3iu8" path="res://Objects/CelestialBody/object_marker.tscn" id="2_56pi7"]
 
 [node name="Node2D" type="Node2D" unique_id=623305407]
+metadata/_edit_lock_ = true
 
 [node name="Node2D" parent="." unique_id=2028188907 instance=ExtResource("1_56pi7")]
-position = Vector2(2, 2)
+position = Vector2(-2, -2)
+planet = null
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=112397874]
-position = Vector2(0, -1)
+position = Vector2(-5, -2)
+zoom = Vector2(0.745, 0.745)
+
+[node name="ObjectMarker" parent="." unique_id=645918896 instance=ExtResource("2_56pi7")]
+position = Vector2(62, -157)
+
+[node name="ObjectMarker2" parent="." unique_id=148778595 instance=ExtResource("2_56pi7")]
+position = Vector2(-334, -345)
+
+[node name="ObjectMarker3" parent="." unique_id=858466054 instance=ExtResource("2_56pi7")]
+position = Vector2(-350, 159)
+
+[node name="ObjectMarker4" parent="." unique_id=679652244 instance=ExtResource("2_56pi7")]
+position = Vector2(-115, 118)
+
+[node name="ObjectMarker5" parent="." unique_id=563075107 instance=ExtResource("2_56pi7")]
+position = Vector2(457, -15)
+
+[node name="ObjectMarker6" parent="." unique_id=1762875373 instance=ExtResource("2_56pi7")]
+position = Vector2(222, -317)

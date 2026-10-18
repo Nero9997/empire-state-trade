@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Transactions;
 
 /*
 this class is the second layer of my three layer system
@@ -28,8 +29,6 @@ public partial class Star : CelestialBody
 	private string starClass;
 	[Export]
 	private PackedScene planet;
-	
-
 
 	private Node[] bodiesInOrbit;
 	// Called when the node enters the scene tree for the first time.
@@ -38,6 +37,7 @@ public partial class Star : CelestialBody
 		/*This for loop creates a random amount of planets in its orbit
 		and then stores them in an array
 		*/
+		/*
 		bodiesInOrbit = new Planet[GD.RandRange(1,6)];
 		for(int i = 0; i < bodiesInOrbit.Length; i++)
 		{
@@ -45,10 +45,10 @@ public partial class Star : CelestialBody
 			Planet newBody = planet.Instantiate() as Planet;
 			bodiesInOrbit[i] = newBody;
 			AddChild(bodiesInOrbit[i]);
-			//newBody.GlobalPosition = GlobalPosition;
+			
 		}
+		*/
 		
-
 	}
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
