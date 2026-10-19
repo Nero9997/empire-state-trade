@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjep4ujfujcty"]
 
-[ext_resource type="Script" uid="uid://rqbwkdbpr12h" path="res://Objects/UI/BuildingScreen.cs" id="1_oqb1r"]
+[ext_resource type="Script" uid="uid://rqbwkdbpr12h" path="res://Objects/UI/planetUIScreen.cs" id="1_oqb1r"]
 [ext_resource type="Texture2D" uid="uid://b7i2u1p6n31td" path="res://Assets/UI/pngtree-vector-plus-icon-png-image_515260.jpg" id="1_scdbu"]
 
 [node name="HBox" type="HBoxContainer" unique_id=1247087785]

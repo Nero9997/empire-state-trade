@@ -7,8 +7,8 @@ public partial class Planet : CelestialBody
 	//General Properties
 	public string planetType; //Check
 	public string planetSize; //Check
-	private int population;
-	private int buildingPlots;
+	private int population; //Check
+	private int buildingPlots; //Check
 	[Export]
 	private Label planetStats;
 	// celestial body oribit propoerties

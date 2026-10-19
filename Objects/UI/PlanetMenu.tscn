@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://rfuc6ntancdt" path="res://Objects/UI/PlanetMenu.cs" id="1_r71hn"]
 [ext_resource type="PackedScene" uid="uid://cjep4ujfujcty" path="res://Objects/UI/buildingScreen.tscn" id="2_w53su"]
+[ext_resource type="PackedScene" uid="uid://b6x4y714jfveg" path="res://Objects/UI/workForceScreen.tscn" id="3_krbf7"]
 
 [node name="Control" type="Control" unique_id=404497437 node_paths=PackedStringArray("clearSpace", "buildings", "workForce", "Stats")]
 layout_mode = 3
@@ -12,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r71hn")
 buildingMenu = ExtResource("2_w53su")
+workForceMenu = ExtResource("3_krbf7")
 clearSpace = NodePath("MarginContainer2")
 buildings = NodePath("MarginContainer/HBoxContainer/Buildings")
 workForce = NodePath("MarginContainer/HBoxContainer/Work Force")
@@ -57,3 +59,4 @@ position = Vector2(1094, 1155)
 zoom = Vector2(0.535, 0.535)
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Buildings" to="." method="buildingsPressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Work Force" to="." method="workForcePressed"]

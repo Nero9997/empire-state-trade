@@ -7,7 +7,10 @@ public partial class PlanetMenu : Control
 {
 	[Export]
 	PackedScene buildingMenu;
-	public BuildingScreen buildMenu;
+	[Export]
+	PackedScene workForceMenu;
+	public planetUIScreen buildMenu;
+	public planetUIScreen workMenu; 
 
 
 
@@ -22,9 +25,15 @@ public partial class PlanetMenu : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		buildMenu = buildingMenu.Instantiate() as BuildingScreen;
+		buildMenu = buildingMenu.Instantiate() as planetUIScreen;
 		clearSpace.AddChild(buildMenu);
 		buildMenu.Visible = false;
+
+		workMenu = workForceMenu.Instantiate() as planetUIScreen;
+		clearSpace.AddChild(workMenu);
+		workMenu.Visible = false;
+
+
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,6 +42,12 @@ public partial class PlanetMenu : Control
 	}
 	public void buildingsPressed()
 	{
+		workMenu.Visible = false;
 		buildMenu.Visible = true;
+	}
+	public void workForcePressed()
+	{
+		buildMenu.Visible = false;
+		workMenu.Visible = true;
 	}
 }

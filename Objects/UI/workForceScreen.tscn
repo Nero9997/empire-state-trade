@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b6x4y714jfveg"]
+
+[ext_resource type="Script" uid="uid://rqbwkdbpr12h" path="res://Objects/UI/planetUIScreen.cs" id="1_f4aao"]
+
+[node name="HBox" type="HBoxContainer" unique_id=1247087785]
+anchors_preset = -1
+anchor_right = 0.54200006
+anchor_bottom = 0.22500001
+offset_right = 0.35986328
+offset_bottom = -1.5258789e-05
+theme_override_constants/separation = 199
+script = ExtResource("1_f4aao")
+theme_override_constants/separation = 199
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=132305651]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=597849487]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Population"
+
+[node name="Label2" type="Label" parent="VBoxContainer2" unique_id=745907220]
+layout_mode = 2
+size_flags_vertical = 6
+text = "WorkForce"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=289247902]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer3" unique_id=1779378414]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Construction"
+
+[node name="Label2" type="Label" parent="VBoxContainer3" unique_id=1041339885]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Manufacturing"
