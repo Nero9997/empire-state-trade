@@ -1,32 +1,9 @@
 [gd_scene format=3 uid="uid://cjep4ujfujcty"]
 
 [ext_resource type="Script" uid="uid://rqbwkdbpr12h" path="res://Objects/UI/planetUIScreen.cs" id="1_oqb1r"]
-[ext_resource type="Texture2D" uid="uid://b7i2u1p6n31td" path="res://Assets/UI/pngtree-vector-plus-icon-png-image_515260.jpg" id="1_scdbu"]
 
-[node name="HBox" type="HBoxContainer" unique_id=1247087785]
+[node name="Slots" type="HBoxContainer" unique_id=1247087785]
 offset_right = 240.0
 offset_bottom = 226.0
 script = ExtResource("1_oqb1r")
 metadata/_edit_lock_ = true
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=132305651]
-layout_mode = 2
-
-[node name="Button6" type="Button" parent="VBoxContainer2" unique_id=191289848]
-layout_mode = 2
-icon = ExtResource("1_scdbu")
-
-[node name="Button7" type="Button" parent="VBoxContainer2" unique_id=1353828976]
-layout_mode = 2
-icon = ExtResource("1_scdbu")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1991212070]
-layout_mode = 2
-
-[node name="Button6" type="Button" parent="VBoxContainer" unique_id=2145847035]
-layout_mode = 2
-icon = ExtResource("1_scdbu")
-
-[node name="Button7" type="Button" parent="VBoxContainer" unique_id=20618631]
-layout_mode = 2
-icon = ExtResource("1_scdbu")

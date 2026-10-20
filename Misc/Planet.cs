@@ -5,22 +5,25 @@ using System.Drawing;
 public partial class Planet : CelestialBody
 {
 	//General Properties
-	public string planetType; //Check
-	public string planetSize; //Check
-	private int population; //Check
-	private int buildingPlots; //Check
+	private string planetType {get; set;} //Check
+	public string planetSize {get; set;} //Check
+	private int population {get; set;} //Check
+	private int buildingPlots {get; set;} //Check
+
+	/*
 	[Export]
 	private Label planetStats;
+	*/
 	// celestial body oribit propoerties
-	public float Radius = (float)GD.RandRange(100.0f, 500.0f);
-	public float Speed = (float)GD.RandRange(0.1f, 1.0f);    // radians per second
-	float angle = (float)GD.RandRange(0.1f, 10.0f);
+	private float Radius = (float)GD.RandRange(100.0f, 500.0f);
+	private float Speed = (float)GD.RandRange(0.1f, 1.0f);    // radians per second
+	private float angle = (float)GD.RandRange(0.1f, 10.0f);
 	/*
 	[Export]
 	cities
 	*/
 	//planetTypes
-	public enum planetTypes
+	private enum planetTypes
 	{
 		gasGiant,
 		grassPlanet,
@@ -29,7 +32,7 @@ public partial class Planet : CelestialBody
 		baronPlanet,
 		continentalPlanet
 	}
-	public enum planetSizes
+	private enum planetSizes
 	{
 		large,
 		medium,
@@ -39,6 +42,7 @@ public partial class Planet : CelestialBody
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		population = GD.RandRange(1000, 4000);
 		selectPlanetSizes();
 		determinePlanetType();
 		determineBuildingPlots();
@@ -50,17 +54,16 @@ public partial class Planet : CelestialBody
 		}
 		*/
 
-		GD.Print(planetType, planetSize, buildingPlots, planetStats);
+		GD.Print(planetType, planetSize, buildingPlots);
 	}
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		
-
 	}
-	//Planet creating process
 
-	public string determinePlanetMakeup(planetTypes select)
+
+	//Planet creating process
+	private string determinePlanetMakeup(planetTypes select)
 	{
 		switch (select)
 		{
@@ -96,7 +99,7 @@ public partial class Planet : CelestialBody
 		}
 		
 	}
-	public string DPlanetSizes(planetSizes select)
+	private string DPlanetSizes(planetSizes select)
 	{
 		switch(select)
 		{
@@ -118,7 +121,7 @@ public partial class Planet : CelestialBody
 				}
 		}
 	}
-	public void selectPlanetSizes()
+	private void selectPlanetSizes()
 	{
 		planetSize = DPlanetSizes((planetSizes)GD.RandRange(0,2));
 		
@@ -127,7 +130,7 @@ public partial class Planet : CelestialBody
 
 
 
-	public void determinePlanetType()
+	private void determinePlanetType()
 	{
 		if(planetSize.Equals("large"))
 		{
@@ -146,7 +149,7 @@ public partial class Planet : CelestialBody
 			planetType = determinePlanetMakeup(planetTypes.gasGiant);
 		}
 	}
-	public void determineBuildingPlots()
+	private void determineBuildingPlots()
 	{
 		if(planetSize.Equals("large"))
 		{
@@ -162,7 +165,7 @@ public partial class Planet : CelestialBody
 		}
 	}
 
-	public void gravityCalc(Area2D area)
+	private void gravityCalc(Area2D area)
 	{
 		if(area.GetParent() is Star star)
 		{
@@ -171,13 +174,19 @@ public partial class Planet : CelestialBody
 	}
 		public void CheckPlanetDetails()
 	{
-		if(planetStats.Visible == false)
+		ViewController.Instance.currentPlanet = this;
+		if(ViewController.Instance.currentPlanet.Equals(this))
 		{
-			planetStats.Visible  = true;
+			GD.Print("Select");	
 		}
 		else
 		{
-			planetStats.Visible = false;
+			GD.Print("No select");
 		}
+		
+	}
+	public int returnPopulation()
+	{
+		return population;
 	}
 }

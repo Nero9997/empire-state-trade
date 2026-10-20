@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cmrqmyxjwrua0"]
+
+[ext_resource type="Texture2D" uid="uid://b7i2u1p6n31td" path="res://Assets/UI/pngtree-vector-plus-icon-png-image_515260.jpg" id="2_lvacs"]
+
+[node name="VBoxContainer2" type="VBoxContainer" unique_id=132305651]
+offset_right = 118.0
+offset_bottom = 226.0
+
+[node name="Button6" type="Button" parent="." unique_id=191289848]
+layout_mode = 2
+icon = ExtResource("2_lvacs")
+
+[node name="Button7" type="Button" parent="." unique_id=1353828976]
+layout_mode = 2
+icon = ExtResource("2_lvacs")

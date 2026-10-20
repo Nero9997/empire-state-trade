@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="EmpireStateTrade"
-run/main_scene="uid://cuqdhur3k4hrv"
+run/main_scene="uid://dsgfbtaqmfctr"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ViewController="*uid://ia2banwt0xw5"
 
 [display]
 

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c51y2shep6ubj" path="res://Objects/Stars/Star.tscn" id="1_56pi7"]
 [ext_resource type="PackedScene" uid="uid://dxsawknxh3iu8" path="res://Objects/CelestialBody/object_marker.tscn" id="2_56pi7"]
+[ext_resource type="PackedScene" uid="uid://cuqdhur3k4hrv" path="res://Objects/UI/PlanetMenu.tscn" id="3_sqeeo"]
 
 [node name="Node2D" type="Node2D" unique_id=623305407]
 metadata/_edit_lock_ = true
@@ -31,3 +32,14 @@ position = Vector2(457, -15)
 
 [node name="ObjectMarker6" parent="." unique_id=1762875373 instance=ExtResource("2_56pi7")]
 position = Vector2(222, -317)
+
+[node name="Control" parent="." unique_id=404497437 instance=ExtResource("3_sqeeo")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -956.0
+offset_top = -418.0
+offset_right = -954.0
+offset_bottom = -361.0
+grow_horizontal = 1
+grow_vertical = 1

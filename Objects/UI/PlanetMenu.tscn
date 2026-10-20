@@ -3,17 +3,21 @@
 [ext_resource type="Script" uid="uid://rfuc6ntancdt" path="res://Objects/UI/PlanetMenu.cs" id="1_r71hn"]
 [ext_resource type="PackedScene" uid="uid://cjep4ujfujcty" path="res://Objects/UI/buildingScreen.tscn" id="2_w53su"]
 [ext_resource type="PackedScene" uid="uid://b6x4y714jfveg" path="res://Objects/UI/workForceScreen.tscn" id="3_krbf7"]
+[ext_resource type="PackedScene" uid="uid://bs7p8on4i0qqk" path="res://Objects/UI/statsScreen.tscn" id="4_6eqkd"]
 
 [node name="Control" type="Control" unique_id=404497437 node_paths=PackedStringArray("clearSpace", "buildings", "workForce", "Stats")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.0
+offset_bottom = 57.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r71hn")
 buildingMenu = ExtResource("2_w53su")
 workForceMenu = ExtResource("3_krbf7")
+statsMenu = ExtResource("4_6eqkd")
 clearSpace = NodePath("MarginContainer2")
 buildings = NodePath("MarginContainer/HBoxContainer/Buildings")
 workForce = NodePath("MarginContainer/HBoxContainer/Work Force")
@@ -21,8 +25,9 @@ Stats = NodePath("MarginContainer/HBoxContainer/Stats")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1502313696]
 layout_mode = 0
+offset_left = 7.0
 offset_top = 608.0
-offset_right = 1924.0
+offset_right = 1931.0
 offset_bottom = 721.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=290684522]
@@ -49,14 +54,15 @@ anchors_preset = -1
 anchor_top = 0.66800004
 anchor_right = 1.0
 anchor_bottom = 0.9990001
-offset_left = -1.0
+offset_left = 6.0
 offset_top = -0.44006348
-offset_right = 2.0
+offset_right = 9.0
 offset_bottom = 0.079956055
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1397290064]
-position = Vector2(1094, 1155)
-zoom = Vector2(0.535, 0.535)
+position = Vector2(960, 572)
+zoom = Vector2(0.945, 0.945)
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Buildings" to="." method="buildingsPressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Work Force" to="." method="workForcePressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Stats" to="." method="statsPressed"]
