@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://bbx16xq23ser8"]
 
 [ext_resource type="Texture2D" uid="uid://ttst4nww0s1e" path="res://Assets/Planets/Planet.png" id="1_2hiue"]
-[ext_resource type="Script" uid="uid://bwwg8unyfxsr1" path="res://Misc/Planet.cs" id="1_76fol"]
+[ext_resource type="Script" uid="uid://bwwg8unyfxsr1" path="res://Objects/Planets/Planet.cs" id="1_76fol"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_chqlt"]
 radius = 17.088007
 
-[node name="Planet" type="Node2D" unique_id=1486127275 node_paths=PackedStringArray("planetStats", "viewButton", "planetStats")]
+[node name="Planet" type="Node2D" unique_id=1486127275 node_paths=PackedStringArray("viewButton", "planetStats")]
 script = ExtResource("1_76fol")
-planetStats = NodePath("Stats")
 viewButton = NodePath("Button")
 planetStats = NodePath("Stats")
 

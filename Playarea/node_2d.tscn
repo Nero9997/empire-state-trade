@@ -8,38 +8,29 @@
 metadata/_edit_lock_ = true
 
 [node name="Node2D" parent="." unique_id=2028188907 instance=ExtResource("1_56pi7")]
-position = Vector2(-2, -2)
+position = Vector2(876, 508)
 planet = null
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=112397874]
-position = Vector2(-5, -2)
-zoom = Vector2(0.745, 0.745)
-
 [node name="ObjectMarker" parent="." unique_id=645918896 instance=ExtResource("2_56pi7")]
-position = Vector2(62, -157)
+position = Vector2(940, 353)
 
 [node name="ObjectMarker2" parent="." unique_id=148778595 instance=ExtResource("2_56pi7")]
-position = Vector2(-334, -345)
+position = Vector2(544, 165)
 
 [node name="ObjectMarker3" parent="." unique_id=858466054 instance=ExtResource("2_56pi7")]
-position = Vector2(-350, 159)
+position = Vector2(528, 669)
 
 [node name="ObjectMarker4" parent="." unique_id=679652244 instance=ExtResource("2_56pi7")]
-position = Vector2(-115, 118)
+position = Vector2(763, 628)
 
 [node name="ObjectMarker5" parent="." unique_id=563075107 instance=ExtResource("2_56pi7")]
-position = Vector2(457, -15)
+position = Vector2(1335, 495)
 
 [node name="ObjectMarker6" parent="." unique_id=1762875373 instance=ExtResource("2_56pi7")]
-position = Vector2(222, -317)
+position = Vector2(1100, 193)
 
-[node name="Control" parent="." unique_id=404497437 instance=ExtResource("3_sqeeo")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -956.0
-offset_top = -418.0
-offset_right = -954.0
-offset_bottom = -361.0
-grow_horizontal = 1
-grow_vertical = 1
+[node name="Camera2D" type="Camera2D" parent="." unique_id=112397874]
+position = Vector2(873, 508)
+zoom = Vector2(0.745, 0.745)
+
+[node name="Control" parent="." unique_id=1118657113 instance=ExtResource("3_sqeeo")]

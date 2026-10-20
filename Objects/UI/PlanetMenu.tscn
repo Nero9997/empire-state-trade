@@ -5,15 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://b6x4y714jfveg" path="res://Objects/UI/workForceScreen.tscn" id="3_krbf7"]
 [ext_resource type="PackedScene" uid="uid://bs7p8on4i0qqk" path="res://Objects/UI/statsScreen.tscn" id="4_6eqkd"]
 
-[node name="Control" type="Control" unique_id=404497437 node_paths=PackedStringArray("clearSpace", "buildings", "workForce", "Stats")]
+[node name="Control" type="Control" unique_id=2118386796 node_paths=PackedStringArray("clearSpace", "buildings", "workForce", "Stats")]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -2.0
-offset_bottom = 57.0
-grow_horizontal = 2
-grow_vertical = 2
+anchor_right = 0.40300003
+anchor_bottom = 0.163
+offset_right = -773.7601
+offset_bottom = -176.04001
 script = ExtResource("1_r71hn")
 buildingMenu = ExtResource("2_w53su")
 workForceMenu = ExtResource("3_krbf7")
@@ -24,14 +21,19 @@ workForce = NodePath("MarginContainer/HBoxContainer/Work Force")
 Stats = NodePath("MarginContainer/HBoxContainer/Stats")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1502313696]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 608.0
-offset_right = 1931.0
-offset_bottom = 721.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004
+anchor_right = 0.004
+anchor_bottom = 0.535
+offset_left = -0.6880002
+offset_top = -0.29504395
+offset_right = 776.0
+offset_bottom = 176.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=290684522]
 layout_mode = 2
+metadata/_edit_lock_ = true
 
 [node name="Buildings" type="Button" parent="MarginContainer/HBoxContainer" unique_id=860281688]
 layout_mode = 2
@@ -51,17 +53,10 @@ text = "Stats"
 [node name="MarginContainer2" type="MarginContainer" parent="." unique_id=778701222]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.66800004
-anchor_right = 1.0
-anchor_bottom = 0.9990001
-offset_left = 6.0
-offset_top = -0.44006348
-offset_right = 9.0
-offset_bottom = 0.079956055
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1397290064]
-position = Vector2(960, 572)
-zoom = Vector2(0.945, 0.945)
+offset_left = 2.0
+offset_top = 177.0
+offset_right = 778.0
+offset_bottom = 351.44006
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Buildings" to="." method="buildingsPressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Work Force" to="." method="workForcePressed"]
