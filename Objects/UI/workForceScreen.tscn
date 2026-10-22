@@ -19,7 +19,7 @@ layout_mode = 2
 size_flags_vertical = 6
 text = "Population:"
 
-[node name="Label2" type="Label" parent="Field1" unique_id=745907220]
+[node name="WorkForce" type="Label" parent="Field1" unique_id=745907220]
 layout_mode = 2
 size_flags_vertical = 6
 text = "WorkForce:"
@@ -27,12 +27,12 @@ text = "WorkForce:"
 [node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=289247902]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer3" unique_id=1779378414]
+[node name="specialization1" type="Label" parent="VBoxContainer3" unique_id=1779378414]
 layout_mode = 2
 size_flags_vertical = 6
 text = "Construction:"
 
-[node name="Label2" type="Label" parent="VBoxContainer3" unique_id=1041339885]
+[node name="specialization2" type="Label" parent="VBoxContainer3" unique_id=1041339885]
 layout_mode = 2
 size_flags_vertical = 6
 text = "Manufacturing:"
