@@ -6,6 +6,7 @@ using System.Xml;
 
 public partial class PlanetMenu : Control
 {
+	//children PackedScenes
 	[Export]
 	PackedScene buildingMenu;
 	[Export]
@@ -13,12 +14,21 @@ public partial class PlanetMenu : Control
 	[Export]
 	PackedScene statsMenu;
 
+	/* must find out how to go about adding the buildingslots
+	scene to the buildingScreen scene. I've done the same thing
+	with the other UI elements so Its only a matter of time
+	before I figure it out
+	*/
+	[Export]
+	PackedScene buildingSlots;
 
+	//children UI nodes
 	private planetUIScreen buildMenu;
 	private planetUIScreen workMenu; 
 	private planetUIScreen statMenu;
+	private VBoxContainer buildSlots;
 
-
+	//Children UI scenes
 	[Export]
 	MarginContainer clearSpace;
 	[Export]
@@ -31,20 +41,26 @@ public partial class PlanetMenu : Control
 
 
 
-	//Display properties
+	//Display properties for workMenu 
 	Label workMenuField1;
 	Label workMenuField2;
 	Label workMenuField3;
 	Label workMenuField4;
+
+	//Display properties for stats menu
+	Label statsMenuField1;
+	Label statsMenuField2;
+	Label statsMenuField3;
+
+	
+	
+	//action stats displayed to the screen
 	private int Population; 
 	private int workF;
-	
 	private string[] specializations;
-
-
-	//Display stats
 	private string planetType;
 	private string planetSize;
+	private int buildingPlots;
 
 
 	//Labels 
@@ -63,6 +79,9 @@ public partial class PlanetMenu : Control
 		statMenu = statsMenu.Instantiate() as planetUIScreen;
 		clearSpace.AddChild(statMenu);
 		statMenu.Visible = false;
+
+		
+
 	}
 	
 
@@ -85,6 +104,24 @@ public partial class PlanetMenu : Control
 
 			workMenuField4 = workMenu.FindChild("specialization2") as Label;
 			workMenuField4.Text = ($"specialization2: {specializations[1]}");
+
+			planetType = ViewController.Instance.currentPlanet.returnPlanetType();
+			statsMenuField1 = statMenu.FindChild("PlanetType") as Label;
+			statsMenuField1.Text = ($"Planet Type: {planetType}");
+
+			planetSize = ViewController.Instance.currentPlanet.returnPlanetSize();
+			statsMenuField2 = statMenu.FindChild("PlanetSize") as Label;
+			statsMenuField2.Text = ($"Planet Size: {planetSize}");
+
+			buildingPlots = ViewController.Instance.currentPlanet.returnBuildingPlots();
+			statsMenuField3 = statMenu.FindChild("BuildingPlots") as Label;
+			statsMenuField3.Text = ($"Building Plots: {buildingPlots}");
+
+			for(int i = 0; i <= buildingPlots; i++)
+			{
+				buildMenu.AddChild(buildSlots = buildingSlots.Instantiate() as VBoxContainer);
+			} 
+
 		}
 	}
 	public void buildingsPressed()
@@ -92,6 +129,7 @@ public partial class PlanetMenu : Control
 		statMenu.Visible = false;
 		workMenu.Visible = false;
 		buildMenu.Visible = true;
+		
 	}
 	public void workForcePressed()
 	{

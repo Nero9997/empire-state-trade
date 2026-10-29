@@ -14,12 +14,17 @@ script = ExtResource("1_et5ti")
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=132305651]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer2" unique_id=597849487]
+[node name="PlanetType" type="Label" parent="VBoxContainer2" unique_id=597849487]
 layout_mode = 2
 size_flags_vertical = 6
 text = "Planet Type:"
 
-[node name="Label2" type="Label" parent="VBoxContainer2" unique_id=745907220]
+[node name="PlanetSize" type="Label" parent="VBoxContainer2" unique_id=745907220]
 layout_mode = 2
 size_flags_vertical = 6
 text = "Planet Size:"
+
+[node name="BuildingPlots" type="Label" parent="VBoxContainer2" unique_id=394838028]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Building Plots:"

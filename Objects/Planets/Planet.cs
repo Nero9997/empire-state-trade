@@ -12,7 +12,7 @@ public partial class Planet : CelestialBody
 
 	//Planet stas
 	private string planetType {get; set;} //Check
-	public string planetSize {get; set;} //Check
+	private string planetSize {get; set;} //Check
 
 	//Planet Workforce
 	private int population {get; set;} //Check
@@ -253,5 +253,18 @@ public partial class Planet : CelestialBody
 	public string[] returnSpeicalizations()
 	{
 		return specializations;
+	}
+
+	public string returnPlanetType()
+	{
+		return planetType;
+	}
+	public string returnPlanetSize()
+	{
+		return planetSize;
+	}
+	public int returnBuildingPlots()
+	{
+		return buildingPlots;
 	}
 }

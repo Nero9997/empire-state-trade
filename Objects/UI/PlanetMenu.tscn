@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cjep4ujfujcty" path="res://Objects/UI/buildingScreen.tscn" id="2_w53su"]
 [ext_resource type="PackedScene" uid="uid://b6x4y714jfveg" path="res://Objects/UI/workForceScreen.tscn" id="3_krbf7"]
 [ext_resource type="PackedScene" uid="uid://bs7p8on4i0qqk" path="res://Objects/UI/statsScreen.tscn" id="4_6eqkd"]
+[ext_resource type="PackedScene" uid="uid://cmrqmyxjwrua0" path="res://Objects/UI/UIElements/buildingSlots.tscn" id="5_hi088"]
 
 [node name="Control" type="Control" unique_id=2118386796 node_paths=PackedStringArray("clearSpace", "buildings", "workForce", "Stats")]
 layout_mode = 3
@@ -15,6 +16,7 @@ script = ExtResource("1_r71hn")
 buildingMenu = ExtResource("2_w53su")
 workForceMenu = ExtResource("3_krbf7")
 statsMenu = ExtResource("4_6eqkd")
+buildingSlots = ExtResource("5_hi088")
 clearSpace = NodePath("MarginContainer2")
 buildings = NodePath("MarginContainer/HBoxContainer/Buildings")
 workForce = NodePath("MarginContainer/HBoxContainer/Work Force")
