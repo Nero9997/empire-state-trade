@@ -6,6 +6,10 @@ using System.Xml;
 
 public partial class PlanetMenu : Control
 {
+
+
+
+	// 
 	//children PackedScenes
 	[Export]
 	PackedScene buildingMenu;
@@ -116,12 +120,6 @@ public partial class PlanetMenu : Control
 			buildingPlots = ViewController.Instance.currentPlanet.returnBuildingPlots();
 			statsMenuField3 = statMenu.FindChild("BuildingPlots") as Label;
 			statsMenuField3.Text = ($"Building Plots: {buildingPlots}");
-
-			for(int i = 0; i <= buildingPlots; i++)
-			{
-				buildMenu.AddChild(buildSlots = buildingSlots.Instantiate() as VBoxContainer);
-			} 
-
 		}
 	}
 	public void buildingsPressed()
@@ -129,6 +127,10 @@ public partial class PlanetMenu : Control
 		statMenu.Visible = false;
 		workMenu.Visible = false;
 		buildMenu.Visible = true;
+		for(int i = 0; i <= buildingPlots/2; i++)
+			{
+				buildMenu.AddChild(buildSlots = buildingSlots.Instantiate() as VBoxContainer);
+			} 
 		
 	}
 	public void workForcePressed()
