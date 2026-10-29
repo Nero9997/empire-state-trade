@@ -124,23 +124,37 @@ public partial class PlanetMenu : Control
 	}
 	public void buildingsPressed()
 	{
+		
 		statMenu.Visible = false;
 		workMenu.Visible = false;
 		buildMenu.Visible = true;
-		for(int i = 0; i <= buildingPlots/2; i++)
+		foreach(Node child in buildMenu.GetChildren())
+			{
+				child.QueueFree();
+			}
+		for(int i = 0; i <= buildingPlots - 1; i++)
 			{
 				buildMenu.AddChild(buildSlots = buildingSlots.Instantiate() as VBoxContainer);
-			} 
+			}
+
 		
 	}
 	public void workForcePressed()
 	{
+		foreach(Node child in buildMenu.GetChildren())
+			{
+				child.QueueFree();
+			}
 		statMenu.Visible = false;
 		buildMenu.Visible = false;
 		workMenu.Visible = true;
 	}
 	public void statsPressed()
 	{
+		foreach(Node child in buildMenu.GetChildren())
+			{
+				child.QueueFree();
+			}
 		statMenu.Visible = true;
 		buildMenu.Visible = false;
 		workMenu.Visible = false;
