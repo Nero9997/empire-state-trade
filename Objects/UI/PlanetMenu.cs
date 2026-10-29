@@ -95,8 +95,6 @@ public partial class PlanetMenu : Control
 	}
 	public void workForcePressed()
 	{
-		
-		
 		statMenu.Visible = false;
 		buildMenu.Visible = false;
 		workMenu.Visible = true;
